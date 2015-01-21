@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+
+        <head>
+
+                <title>testPage</title>
+
+                
+                 <script src="js/angular.js"></script>
+                <script src="data/data.js"></script>
+                
+                <link rel="stylesheet" href="css/style.css">
+
+        	
+        </head>
+        <body>
+                <h3>Basic PHP MySQL API Consumed with AngularJS</h3>
+
+<!--This div now has all the inheritance features of AngularJS with ng-app,
+ ng-modal allow data to be  parse through the box filter-->
+
+                <div class="tbData" ng-app="" ng-controller="GetUsers" ng-model="test">
+                        <table>
+                                <thead>
+                                        <tr>
+                                                <th>Id</th>
+                                                <th>Name</th>
+                                                <th>City</th>
+                                                <th>Country</th>
+                                        </tr>
+                                </thead>
+
+                                <tbody>
+                                        
+                                <!--Data to Return when filtering the search box & our Database -->        
+                                        <tr ng-repeat="user in users | filter:test">
+                                                <td>{{user.Id}}</td>
+                                                <td>{{ user.Name }}</td>
+                                                <td>{{user.City | uppercase}}</td>
+                                                <td>{{user.Country | uppercase}}</td>
+                                        </tr>
+                                </tbody>
+                                
+                                <tfoot> 
+                                        <h2>Filter Input Search Box</h2>
+                                        <p><input type="text" ng-model="test"></p>
+                                        </tfoot>
+                                
+                        </div>
+
+
+                </body>
+                </html>

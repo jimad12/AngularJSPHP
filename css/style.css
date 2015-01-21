@@ -1,0 +1,27 @@
+table, th , td  {
+              border: 1px solid grey;
+              border-collapse: collapse;
+              padding: 5px;
+              margin-left:auto;
+              margin-right:auto;
+            }
+            table tr:nth-child(odd)	{
+              background-color: #f1f1f1;
+            }
+            table tr:nth-child(even) {
+              background-color: #f9f9f0;
+            }
+            
+            h3{
+              text-align: center;
+              color: olive;
+            }
+            h2, p{
+              text-align:center;
+              color: olive;
+            }
+            body{
+              background-image:url('../images/cupcakes.jpg');
+              background-repeat: no-repeat;
+              background-position: center;
+            }
